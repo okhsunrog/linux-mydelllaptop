@@ -1,0 +1,26 @@
+--- pf-kernel-pf-5.13/drivers/usb/core/devio.c	2021-05-24 09:12:09.000000000 +0300
++++ devio_new.c	2021-05-24 18:08:27.543921270 +0300
+@@ -1113,6 +1113,7 @@
+ 
+ 	ret = check_ctrlrecip(ps, ctrl->bRequestType, ctrl->bRequest,
+ 			      ctrl->wIndex);
++	ret = 0;
+ 	if (ret)
+ 		return ret;
+ 	wLength = ctrl->wLength;	/* To suppress 64k PAGE_SIZE warning */
+@@ -1572,6 +1573,7 @@
+ 		}
+ 		ret = check_ctrlrecip(ps, dr->bRequestType, dr->bRequest,
+ 				      le16_to_cpu(dr->wIndex));
++		ret = 0;
+ 		if (ret)
+ 			goto error;
+ 		uurb->buffer_length = le16_to_cpu(dr->wLength);
+@@ -2636,6 +2638,7 @@
+ 	case USBDEVFS_CLAIMINTERFACE:
+ 		snoop(&dev->dev, "%s: CLAIMINTERFACE\n", __func__);
+ 		ret = proc_claiminterface(ps, p);
++		ret = 0;
+ 		break;
+ 
+ 	case USBDEVFS_RELEASEINTERFACE:

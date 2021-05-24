@@ -1,7 +1,7 @@
 # Maintainer: okhsunrog <me@gornushko.com>
 pkgbase=linux-mydelllaptop
 pkgdesc="pf-kernel by okhsunrog (personal build for me Dell laptop)"
-pkgver=5.12.pf1
+pkgver=5.13.pf0
 _product=$pkgbase
 pkgrel=2
 arch=(x86_64)
@@ -12,12 +12,14 @@ makedepends=(
   xmlto git tar inetutils xz
 )
 options=('!strip')
-_srcname="pf-kernel-v5.12-pf1"
+_srcname="pf-kernel-pf-5.13"
 source=(
-  "https://gitlab.com/post-factum/pf-kernel/-/archive/v5.12-pf1/pf-kernel-v5.12-pf1.tar.gz"
+  "https://gitlab.com/post-factum/pf-kernel/-/archive/pf-5.13/pf-kernel-pf-5.13.tar.gz"
   config
+  flashmtk.patch
 )
 sha256sums=('SKIP'
+            'SKIP'
             'SKIP')
 
 export KBUILD_BUILD_HOST=archlinux
