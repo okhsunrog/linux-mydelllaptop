@@ -1,9 +1,9 @@
 # Maintainer: okhsunrog <me@gornushko.com>
 pkgbase=linux-mydelllaptop
 pkgdesc="pf-kernel by okhsunrog (personal build for me Dell laptop)"
-pkgver=5.13.pf0
+pkgver=5.12.pf6
 _product=$pkgbase
-pkgrel=3
+pkgrel=1
 arch=(x86_64)
 url="https://gitlab.com/post-factum/pf-kernel/-/wikis/README"
 license=(GPL2)
@@ -14,7 +14,7 @@ makedepends=(
 options=('!strip')
 _srcname="pf-kernel-pf-5.13"
 source=(
-  "https://gitlab.com/post-factum/pf-kernel/-/archive/pf-5.13/pf-kernel-pf-5.13.tar.gz"
+  "https://gitlab.com/post-factum/pf-kernel/-/archive/v5.12-pf6/pf-kernel-v5.12-pf6.tar.gz"
   config
   flashmtk.patch
 )
