@@ -3,7 +3,7 @@ pkgbase=linux-mydelllaptop
 pkgdesc="pf-kernel by okhsunrog (personal build for me Dell laptop)"
 pkgver=5.12.pf6
 _product=$pkgbase
-pkgrel=1
+pkgrel=2
 arch=(x86_64)
 url="https://gitlab.com/post-factum/pf-kernel/-/wikis/README"
 license=(GPL2)
@@ -12,7 +12,7 @@ makedepends=(
   xmlto git tar inetutils xz
 )
 options=('!strip')
-_srcname="pf-kernel-pf-5.13"
+_srcname="pf-kernel-v5.12-pf6"
 source=(
   "https://gitlab.com/post-factum/pf-kernel/-/archive/v5.12-pf6/pf-kernel-v5.12-pf6.tar.gz"
   config
